@@ -25,35 +25,20 @@
 
 <div class="loginBox">
 	<div class="login_cont">
-		<ul class="login">
-			<li class="l_tit">邮箱/用户名/手机号</li>
-			<li class="mb_10"><input type="text" class="login_input user_icon"></li>
-			<li class="l_tit">密码</li>
-			<li class="mb_10"><input type="text" class="login_input user_icon"></li>
-			<li  class="l_tit">验证码</li>
-			<li class="mb_10"><input type="text" name="verify" class="login_input user_icon"></li>
-			<img src="getVerify.php" alt=""/>
-			<li class="autoLogin"><input type="checkbox" id="a1" class="checked"><label for="a1">自动登陆</label></li>
-			<li><input type="button" value="" class="login_btn"></li>
-		</ul>
-		<div class="login_partners">
-			<p class="l_tit">使用合作方账号登陆网站</p>
-			<ul class="login_list clearfix">
-				<li><a href="#">QQ</a></li>
-				<li><span>|</span></li>
-				<li><a href="#">网易</a></li>
-				<li><span>|</span></li>
-				<li><a href="#">新浪微博</a></li>
-				<li><span>|</span></li>
-				<li><a href="#">腾讯微薄</a></li>
-				<li><span>|</span></li>
-				<li><a href="#">新浪微博</a></li>
-				<li><span>|</span></li>
-				<li><a href="#">腾讯微薄</a></li>
+		<form action="./doLogin.php" method="post">
+			<ul class="login">
+				<li class="l_tit">管理员帐号</li>
+				<li class="mb_10"><input type="text"  name="username" placeholder="请输入管理员帐号"class="login_input user_icon"></li>
+				<li class="l_tit">密码</li>
+				<li class="mb_10"><input type="password"  name="password" class="login_input password_icon"></li>
+				<li class="l_tit">验证码</li>
+				<li class="mb_10"><input type="text"  name="verify" class="login_input password_icon"></li>
+				<img src="getVerify.php" alt="" />
+				<li class="autoLogin"><input type="checkbox" id="a1" class="checked" name="autoFlag" value="1"><label for="a1">自动登陆(一周内自动登陆)</label></li>
+				<li><input type="submit" value="" class="login_btn"></li>
 			</ul>
-		</div>
+		</form>
 	</div>
-	<a class="reg_link" href="#"></a>
 </div>
 
 <div class="hr_25"></div>

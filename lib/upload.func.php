@@ -6,9 +6,9 @@
  * @version $Id$
  */
 
-class ClassName extends AnotherClass {
-    
-    function __construct(){
-        
-    }
-}
+//class ClassName extends AnotherClass {
+//
+//    function __construct(){
+//
+//    }
+//}

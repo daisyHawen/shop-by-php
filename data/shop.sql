@@ -37,7 +37,7 @@ CREATE TABLE `shop_user`(
 `id` int unsigned auto_increment key,
 `unsername` varchar(20) not null unique,
 `password` char(32) not null,
-`sex` enum(`男`,`女`,`保密`) not null default `保密`，
+`sex` enum(`男`,`女`,`保密`) not null default `保密`,
 `face` varchar(50) not null,
 `regTime` int unsigned not null
 );

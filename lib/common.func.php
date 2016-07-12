@@ -5,10 +5,7 @@
  * @date    2016-07-10 16:44:49
  * @version $Id$
  */
-
-class ClassName extends AnotherClass {
-    
-    function __construct(){
-        
-    }
+function alertMes($mes,$url){
+    echo "<script>alert('{$mes}');</script>";
+    echo "<script>window.location.href='login.php';</script>";
 }

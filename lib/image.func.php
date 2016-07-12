@@ -32,4 +32,4 @@ function verifyImage($sess_name="verify",$type=1, $length=4){
     imagegif($image);
     imagedestroy($image);
 }
-verifyImage();
+//verifyImage();
