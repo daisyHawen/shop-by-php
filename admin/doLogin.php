@@ -1,22 +1,6 @@
 <?php
 header("content-type:text/html;charset=utf-8");
 //session_start();
-//require_once '../include.php';
-//$username=$_POST['username'];
-//$password=md5($_POST['password']);
-//$verify=$_POST['verify'];
-//$verify1=$_SESSION['verify'];
-////print_r("this is do login");
-////echo "<scripts> alert('验证码正确')</scripts>";
-//if($verify==$verify1){
-//   $sql="select *from shop_admin where username='$username'and password={$password}";
-//   $result=checkAdmin($sql);
-//    print_r($result);
-//    echo "<scripts> alert('验证码正确')</scripts>";
-//}else{
-//    echo "<scripts> alert('验证码错误')</scripts>";
-//    echo"<script>window.location='login.php'</script>";
-//}
 require_once '../include.php';
 $username=$_POST['username'];
 $username=addslashes($username);
@@ -25,7 +9,8 @@ $verify=$_POST['verify'];
 $verify1=$_SESSION['verify'];
 $autoFlag=$_POST['autoFlag'];
 if($verify==$verify1){
-    $sql="select * from shop_admin where username='{$username}' and password='{$password}'";
+//    $sql="select * from shop_admin where username='{$username}' and password='{$password}'";
+    $sql="SELECT * FROM shop_admin";
     $row=checkAdmin($sql);
     if($row){
         //如果选了一周内自动登陆

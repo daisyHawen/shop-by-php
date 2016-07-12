@@ -8,10 +8,15 @@
 /*数据库连接操作*/
 function connect(){
 //    mysql.connect("localhost","root","" or die("数据库连接失败Error：".mysql_errno().":".mysql_error()));
-    $link=mysqli.connect("localhost","root","" or die("数据库连接失败Error：".mysqli_errno().":".mysqli_error()));
-    mysqli_set_charset(DB_CHARSET);
-    mysqli_select_db(DB_DBNAME)or die("指定数据库连接失败");
+//    $link=mysqli.connect("localhost","root","" or die("数据库连接失败Error：".mysqli_errno().":".mysqli_error()));
+//    $link=new mysqli(DB_HOST,DB_USER,DB_PWD,DB_DBNAME) or die("数据库连接失败Error:".mysql_errno().":".mysql_error());
+    $link= new mysqli(DB_HOST,DB_USER,DB_PWD,DB_DBNAME);
+// 检测连接
+    if ($link->connect_error) {
+        die("连接失败: " . $link->connect_error);
+    }
     return $link;
+
 }
 /*数据库插入操作*/
 function insert($table,$array){
@@ -45,9 +50,18 @@ function delete($table,$where=null){
 }
 /*查找操作,查找一条记录*/
 function fetchOne($sql,$result_type=MYSQLI_ASSOC){
-    $result=mysqli_query($sql);
-    $row=mysqli_fetch_array($result,$result_type);
-    return $row;
+    $result=mysqli_query(connect(),$sql);
+    if ($result->num_rows > 0) {
+        // 输出每行数据
+        while($row = $result->fetch_assoc()) {
+//            echo "<br> id: ". $row["id"]. " - Name: ". $row["username"]. " " . $row["password"];
+            return $row;
+        }
+    } else {
+        echo "0 个结果";
+    }
+//    echo "row:".$row."end";
+
 }
 /*查找操作,获取所有记录*/
 function fetchAll($sql,$result_type=MYSQLI_ASSOC){
