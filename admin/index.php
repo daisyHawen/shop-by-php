@@ -1,308 +1,114 @@
+<?php 
+require_once '../include.php';
+checkLogined();
+?>
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>首页</title>
-<link type="text/css" rel="stylesheet" href="style/reset.css">
-<link type="text/css" rel="stylesheet" href="style/main.css">
-<!--[if IE 6]>
-<script type="text/javascript" src="js/DD_belatedPNG_0.0.8a-min.js"></script>
-<script type="text/javascript" src="js/ie6Fixpng.js"></script>
-<![endif]-->
+<title>-.-</title>
+<link rel="stylesheet" href="style/backstage.css">
 </head>
 
 <body>
-<div class="headerBar">
-	<div class="topBar">
-		<div class="comWidth">
-			<div class="leftArea">
-				<a href="#" class="collection">收藏慕课</a>
-			</div>
-			<div class="rightArea">
-				欢迎来到慕课网！<a href="#">[登录]</a><a href="#">[免费注册]</a>
-			</div>
-		</div>
-	</div>
-	<div class="logoBar">
-		<div class="comWidth">
-			<div class="logo fl">
-				<a href="#"><img src="images/logo.jpg" alt="慕课网"></a>
-			</div>
-			<div class="search_box fl">
-				<input type="text" class="search_text fl">
-				<input type="button" value="搜 索" class="search_btn fr">
-			</div>
-			<div class="shopCar fr">
-				<span class="shopText fl">购物车</span>
-				<span class="shopNum fl">0</span>
-			</div>
-		</div>
-	</div>
-	<div class="navBox">
-		<div class="comWidth clearfix">
-			<div class="shopClass fl">
-				<h3>全部商品分类<i class="shopClass_icon"></i></h3>
-				<div class="shopClass_show">
-					<dl class="shopClass_item">
-						<dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="aLink">合约机</a></dt>
-						<dd><a href="#">荣耀3X</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
-					</dl>
-					<dl class="shopClass_item">
-						<dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="aLink">合约机</a></dt>
-						<dd><a href="#">荣耀3X</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
-					</dl>
-					<dl class="shopClass_item">
-						<dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="aLink">合约机</a></dt>
-						<dd><a href="#">荣耀3X</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
-					</dl>
-					<dl class="shopClass_item">
-						<dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="aLink">合约机</a></dt>
-						<dd><a href="#">荣耀3X</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
-					</dl>
-					<dl class="shopClass_item">
-						<dt><a href="#" class="b">手机</a> <a href="#" class="b">数码</a> <a href="#" class="aLink">合约机</a></dt>
-						<dd><a href="#">荣耀3X</a> <a href="#">单反</a> <a href="#">智能设备</a></dd>
-					</dl>
-				</div>
-				<div class="shopClass_list hide">
-					<div class="shopClass_cont">
-						<dl class="shopList_item">
-							<dt>电脑装机</dt>
-							<dd>
-								<a href="#">文字啊</a><a href="#">文字字啊</a><a href="#">文字字字啊</a><a href="#">文字啊</a><a href="#">文字</a><a href="#">文字啊</a>
-							</dd>
-						</dl>
-						<dl class="shopList_item">
-							<dt>电脑装机</dt>
-							<dd>
-								<a href="#">文字啊</a><a href="#">文字字啊</a><a href="#">文字字字啊</a><a href="#">文字啊</a><a href="#">文字</a><a href="#">文字啊</a><a href="#">文字啊</a><a href="#">文字字啊</a><a href="#">文字字字啊</a><a href="#">文字啊</a><a href="#">文字</a><a href="#">文字啊</a><a href="#">文字啊</a>
-							</dd>
-						</dl>
-						<dl class="shopList_item">
-							<dt>电脑装机</dt>
-							<dd>
-								<a href="#">文字啊</a><a href="#">文字字啊</a><a href="#">文字字字啊</a><a href="#">文字啊</a><a href="#">文字</a><a href="#">文字啊</a><a href="#">文字啊</a><a href="#">文字字啊</a><a href="#">文字字字啊</a><a href="#">文字啊</a><a href="#">文字</a><a href="#">文字啊</a><a href="#">文字啊</a>
-							</dd>
-						</dl>
-						<dl class="shopList_item">
-							<dt>电脑装机</dt>
-							<dd>
-								<a href="#">文字啊</a><a href="#">文字字啊</a><a href="#">文字字字啊</a><a href="#">文字啊</a><a href="#">文字</a><a href="#">文字啊</a><a href="#">文字啊</a><a href="#">文字字啊</a><a href="#">文字字字啊</a><a href="#">文字啊</a><a href="#">文字</a><a href="#">文字啊</a><a href="#">文字啊</a>
-							</dd>
-						</dl>
-						<dl class="shopList_item">
-							<dt>电脑装机</dt>
-							<dd>
-								<a href="#">文字啊</a><a href="#">文字字啊</a><a href="#">文字字字啊</a><a href="#">文字啊</a><a href="#">文字</a><a href="#">文字啊</a><a href="#">文字啊</a><a href="#">文字字啊</a><a href="#">文字字字啊</a><a href="#">文字啊</a><a href="#">文字</a><a href="#">文字啊</a><a href="#">文字啊</a>
-							</dd>
-						</dl>
-						<div class="shopList_links">
-							<a href="#">文字测试内容等等<span></span></a><a href="#">文字容等等<span></span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<ul class="nav fl">
-				<li><a href="#" class="active">数码城</a></li>
-				<li><a href="#">天黑黑</a></li>
-				<li><a href="#">团购</a></li>
-				<li><a href="#">发现</a></li>
-				<li><a href="#">二手特卖</a></li>
-				<li><a href="#">名品会</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<div class="banner comWidth clearfix">
-	<div class="banner_bar banner_big">
-		<ul class="imgBox">
-			<li><a href="#"><img src="images/banner/banner_01.jpg" alt="banner"></a></li>
-			<li><a href="#"><img src="images/banner/banner_02.jpg" alt="banner"></a></li>
-		</ul>
-		<div class="imgNum">
-			<a href="#" class="active"></a><a href="#"></a><a href="#"></a><a href="#"></a>
-		</div>
-	</div>
-</div>
-<div class="shopTit comWidth">
-	<span class="icon"></span><h3>家用电脑</h3>
-	<a href="#" class="more">更多&gt;&gt;</a>
-</div>
-<div class="shopList comWidth clearfix">
-	<div class="leftArea">
-		<div class="banner_bar banner_sm">
-			<ul class="imgBox">
-				<li><a href="#"><img src="images/banner/banner_sm_01.jpg" alt="banner"></a></li>
-				<li><a href="#"><img src="images/banner/banner_sm_02.jpg" alt="banner"></a></li>
-			</ul>
-			<div class="imgNum">
-				<a href="#" class="active"></a><a href="#"></a><a href="#"></a><a href="#"></a>
-			</div>
-		</div>
-	</div>
-	<div class="rightArea">
-		<div class="shopList_top clearfix">
-			<div class="shop_item">
-				<div class="shop_img">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<h3>HTC新渴望8系列</h3>
-				<p>1899元</p>
-			</div>
-			<div class="shop_item">
-				<div class="shop_img">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<h3>HTC新渴望8系列</h3>
-				<p>1899元</p>
-			</div>
-			<div class="shop_item">
-				<div class="shop_img">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<h3>HTC新渴望8系列</h3>
-				<p>1899元</p>
-			</div>
-			<div class="shop_item">
-				<div class="shop_img">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<h3>HTC新渴望8系列</h3>
-				<p>1899元</p>
-			</div>
-		</div>
-		<div class="shopList_sm clearfix">
-			<div class="shopItem_sm">
-				<div class="shopItem_smImg">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<div class="shopItem_text">
-					<p>NFC技术一碰轻松配对！接触屏幕</p>
-					<h3>￥149.00	</h3>
-				</div>
-			</div>
-			<div class="shopItem_sm">
-				<div class="shopItem_smImg">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<div class="shopItem_text">
-					<p>NFC技术一碰轻松配对！接触屏幕</p>
-					<h3>￥149.00	</h3>
-				</div>
-			</div>
-			<div class="shopItem_sm">
-				<div class="shopItem_smImg">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<div class="shopItem_text">
-					<p>NFC技术一碰轻松配对！接触屏幕</p>
-					<h3>￥149.00	</h3>
-				</div>
-			</div>
-			<div class="shopItem_sm">
-				<div class="shopItem_smImg">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<div class="shopItem_text">
-					<p>NFC技术一碰轻松配对！接触屏幕</p>
-					<h3>￥149.00	</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="shopTit comWidth">
-	<span class="icon"></span><h3>家用电脑</h3>
-	<a href="#" class="more">更多&gt;&gt;</a>
-</div>
-<div class="shopList comWidth clearfix">
-	<div class="leftArea">
-		<div class="banner_bar banner_sm">
-			<ul class="imgBox">
-				<li><a href="#"><img src="images/banner/banner_sm_01.jpg" alt="banner"></a></li>
-				<li><a href="#"><img src="images/banner/banner_sm_02.jpg" alt="banner"></a></li>
-			</ul>
-			<div class="imgNum">
-				<a href="#" class="active"></a><a href="#"></a><a href="#"></a><a href="#"></a>
-			</div>
-		</div>
-	</div>
-	<div class="rightArea">
-		<div class="shopList_top clearfix">
-			<div class="shop_item">
-				<div class="shop_img">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<h3>HTC新渴望8系列</h3>
-				<p>1899元</p>
-			</div>
-			<div class="shop_item">
-				<div class="shop_img">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<h3>HTC新渴望8系列</h3>
-				<p>1899元</p>
-			</div>
-			<div class="shop_item">
-				<div class="shop_img">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<h3>HTC新渴望8系列</h3>
-				<p>1899元</p>
-			</div>
-			<div class="shop_item">
-				<div class="shop_img">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<h3>HTC新渴望8系列</h3>
-				<p>1899元</p>
-			</div>
-		</div>
-		<div class="shopList_sm clearfix">
-			<div class="shopItem_sm">
-				<div class="shopItem_smImg">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<div class="shopItem_text">
-					<p>NFC技术一碰轻松配对！接触屏幕</p>
-					<h3>￥149.00	</h3>
-				</div>
-			</div>
-			<div class="shopItem_sm">
-				<div class="shopItem_smImg">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<div class="shopItem_text">
-					<p>NFC技术一碰轻松配对！接触屏幕</p>
-					<h3>￥149.00	</h3>
-				</div>
-			</div>
-			<div class="shopItem_sm">
-				<div class="shopItem_smImg">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<div class="shopItem_text">
-					<p>NFC技术一碰轻松配对！接触屏幕</p>
-					<h3>￥149.00	</h3>
-				</div>
-			</div>
-			<div class="shopItem_sm">
-				<div class="shopItem_smImg">
-					<a href="#"><img src="images/shopImg.jpg" alt=""></a>
-				</div>
-				<div class="shopItem_text">
-					<p>NFC技术一碰轻松配对！接触屏幕</p>
-					<h3>￥149.00	</h3>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<div class="hr_25"></div>
-<div class="footer">
-	<p><a href="#">慕课简介</a><i>|</i><a href="#">慕课公告</a><i>|</i> <a href="#">招纳贤士</a><i>|</i><a href="#">联系我们</a><i>|</i>客服热线：400-675-1234</p>
-	<p>Copyright &copy; 2006 - 2014 慕课版权所有&nbsp;&nbsp;&nbsp;京ICP备09037834号&nbsp;&nbsp;&nbsp;京ICP证B1034-8373号&nbsp;&nbsp;&nbsp;某市公安局XX分局备案编号：123456789123</p>
-	<p class="web"><a href="#"><img src="images/webLogo.jpg" alt="logo"></a><a href="#"><img src="images/webLogo.jpg" alt="logo"></a><a href="#"><img src="images/webLogo.jpg" alt="logo"></a><a href="#"><img src="images/webLogo.jpg" alt="logo"></a></p>
-</div>
+    <div class="head">
+            <div class="logo fl"><a href="#"></a></div>
+            <h3 class="head_text fr">慕课电子商务后台管理系统</h3>
+    </div>
+    <div class="operation_user clearfix">
+       <!--   <div class="link fl"><a href="#">慕课</a><span>&gt;&gt;</span><a href="#">商品管理</a><span>&gt;&gt;</span>商品修改</div>-->
+        <div class="link fr">
+            <b>欢迎您
+            <?php 
+				if(isset($_SESSION['adminName'])){
+					echo $_SESSION['adminName'];
+				}elseif(isset($_COOKIE['adminName'])){
+					echo $_COOKIE['adminName'];
+				}
+            ?>
+            
+            </b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#" class="icon icon_i">首页</a><span></span><a href="#" class="icon icon_j">前进</a><span></span><a href="#" class="icon icon_t">后退</a><span></span><a href="#" class="icon icon_n">刷新</a><span></span><a href="doAdminAction.php?act=logout" class="icon icon_e">退出</a>
+        </div>
+    </div>
+    <div class="content clearfix">
+        <div class="main">
+            <!--右侧内容-->
+            <div class="cont">
+                <div class="title">后台管理</div>
+      	 		<!-- 嵌套网页开始 -->         
+                <iframe src="main.php"  frameborder="0" name="mainFrame" width="100%" height="522"></iframe>
+                <!-- 嵌套网页结束 -->   
+            </div>
+        </div>
+        <!--左侧列表-->
+        <div class="menu">
+            <div class="cont">
+                <div class="title">管理员</div>
+                <ul class="mList">
+                    <li>
+                        <h3><span onclick="show('menu1','change1')" id="change1">+</span>商品管理</h3>
+                        <dl id="menu1" style="display:none;">
+                        	<dd><a href="addPro.php" target="mainFrame">添加商品</a></dd>
+                            <dd><a href="listPro.php" target="mainFrame">商品列表</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3><span onclick="show('menu2','change2')" id="change2">+</span>分类管理</h3>
+                        <dl id="menu2" style="display:none;">
+                        	<dd><a href="addCate.php" target="mainFrame">添加分类</a></dd>
+                            <dd><a href="listCate.php" target="mainFrame">分类列表</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3><span  onclick="show('menu3','change3')" id="change3" >+</span>订单管理</h3>
+                        <dl id="menu3" style="display:none;">
+                            <dd><a href="#">订单修改</a></dd>
+                            <dd><a href="#">订单又修改</a></dd>
+                            <dd><a href="#">订单总是修改</a></dd>
+                            <dd><a href="#">测试内容你看着改</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3><span onclick="show('menu4','change4')" id="change4">+</span>用户管理</h3>
+                        <dl id="menu4" style="display:none;">
+                        	<dd><a href="addUser.php" target="mainFrame">添加用户</a></dd>
+                            <dd><a href="listUser.php" target="mainFrame">用户列表</a></dd>
+                        </dl>
+                    </li>
+                    <li>
+                        <h3><span onclick="show('menu5','change5')" id="change5">+</span>管理员管理</h3>
+                        <dl id="menu5" style="display:none;">
+                        	<dd><a href="addAdmin.php" target="mainFrame">添加管理员</a></dd>
+                            <dd><a href="listAdmin.php" target="mainFrame">管理员列表</a></dd>
+                        </dl>
+                    </li>
+                    
+                         <li>
+                        <h3><span onclick="show('menu6','change6')" id="change6">+</span>商品图片管理</h3>
+                        <dl id="menu6" style="display:none;">
+                            <dd><a href="listProImages.php" target="mainFrame">商品图片列表</a></dd>
+                        </dl>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript">
+    	function show(num,change){
+	    		var menu=document.getElementById(num);
+	    		var change=document.getElementById(change);
+	    		if(change.innerHTML=="+"){
+	    				change.innerHTML="-";
+	        	}else{
+						change.innerHTML="+";
+	            }
+    		   if(menu.style.display=='none'){
+    	             menu.style.display='';
+    		    }else{
+    		         menu.style.display='none';
+    		    }
+        }
+    </script>
 </body>
 </html>

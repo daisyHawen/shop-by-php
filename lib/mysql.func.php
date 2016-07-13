@@ -60,8 +60,6 @@ function fetchOne($sql,$result_type=MYSQLI_ASSOC){
     } else {
         echo "0 个结果";
     }
-//    echo "row:".$row."end";
-
 }
 /*查找操作,获取所有记录*/
 function fetchAll($sql,$result_type=MYSQLI_ASSOC){
