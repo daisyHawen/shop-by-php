@@ -8,6 +8,7 @@ $password=md5($_POST['password']);
 $verify=$_POST['verify'];
 $verify1=$_SESSION['verify'];
 $autoFlag=$_POST['autoFlag'];
+//echo $autoFlag;
 if($verify==$verify1){
 //    $sql="select * from shop_admin where username='{$username}' and password='{$password}'";
     $sql="SELECT * FROM shop_admin";

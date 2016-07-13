@@ -13,7 +13,8 @@ function checkAdmin($sql)
 //检查是否登录了
 function checkLogined()
 {
-    if ($_SESSION['adminId'] == "") {
+//    if ($_SESSION['adminId'] == ""&&$_COOKIE['adminId'==""]) {
+        if ($_SESSION['adminId'] == ""&&$_COOKIE['adminId']=="") {
         alertMes("请先登陆", 'login.php');
     }
 }
@@ -22,6 +23,12 @@ function logout(){
     $_SESSION=array();
     if(isset($_COOKIE[session_name()])){
         setcookie(session_name(),"",time()-1);
+    }
+    if(isset($_COOKIE['adminName'])){
+        setcookie('adminName',"",time()-1);
+    }
+    if(isset($_COOKIE['adminId'])){
+        setcookie('adminId',"",time()-1);
     }
     session_destroy();
     header("location:login.php");
