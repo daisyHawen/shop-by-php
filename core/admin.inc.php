@@ -33,3 +33,4 @@ function logout(){
     session_destroy();
     header("location:login.php");
 }
+/*增加管理员*/
