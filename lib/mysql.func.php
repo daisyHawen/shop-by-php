@@ -20,11 +20,20 @@ function connect(){
 }
 /*数据库插入操作*/
 function insert($table,$array){
-    $keys=join("",array_keys($array));
-    $vals="".join("",array_values($array))."";
-    $sql="insert {$table}{$keys} values {$vals}";
-    mysqli_query($sql);
-    return mysqli_insert_id();
+    $conn=connect();
+    $keys="".join(",",array_keys($array));
+    $vals="'".join("','",array_values($array))."'";
+//INSERT INTO shop_admin (username,password,email)VALUES (xxx,root,512309453@qq.com);
+    $sql="INSERT INTO {$table} ({$keys})VALUES ({$vals})";
+//    $sql="insert {$table}{$keys} values {$vals}";
+    if ($conn->query($sql) === TRUE) {
+//        echo "新记录插入成功";
+        return null;
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+        return $sql;
+    }
+//    return $result->fetch_assoc();
 }
 /*数据库更新操作
 *update shop_admin set username= "king" where id=1*/

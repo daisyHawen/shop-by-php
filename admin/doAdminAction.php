@@ -7,8 +7,5 @@ if($act=="logout"){
     addUser();
 }
 elseif ($act="addAdmin"){
-    $adminName=$_POST["username"];
-    $password=$_POST["password"];
-    $email=$_POST["email"];
-    addAdmin($adminName,$password,$email);
+   addAdmin();
 }
