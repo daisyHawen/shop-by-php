@@ -1,8 +1,8 @@
 <?php 
 require_once '../include.php';
-$pageSize=2;
-$page=$_REQUEST['page']?(int)$_REQUEST['page']:1;
-$rows=getAdminByPage($page,$pageSize);
+//$pageSize=2;
+//$page=$_REQUEST['page']?(int)$_REQUEST['page']:1;
+$rows=getAdminByPage();
 //$sql="select * from imooc_admin";
 //$totalRows=getResultNum($sql);
 //$pageSize=2;
@@ -29,7 +29,7 @@ if(!$rows){
 <head>
 <meta charset="utf-8">
 <title>-.-</title>
-<link rel="stylesheet" href="styles/backstage.css">
+<link rel="stylesheet" href="style/backstage.css">
 </head>
 
 <body>

@@ -5,6 +5,7 @@
  * Date: 2016/7/12
  * Time: 10:49
  */
+/*并没有判断管理员密码是否输入正确，仅仅是判断了一下数据库是否存在管理员*/
 function checkAdmin($sql)
 {
     return fetchOne($sql);
@@ -40,11 +41,15 @@ function addAdmin(){
     $arr['password']=md5($_POST['password']);
     $mes=insert("shop_admin",$arr);
     if(!$mes){
-        alert("新纪录添加成功，选择继续添加<a href='addAdmin.php'>继续添加</a><a href='listAdmin.php'>查看管理员列表</a>");
+        echo "新纪录添加成功，选择继续添加<a href='addAdmin.php'>继续添加</a><a href='listAdmin.php'>查看管理员列表</a>";
     }
 }
 /*查询管理员*/
 function getAdminByPage(){
-    $row=fetchAll();
-    return $row;
+    $sql = "SELECT * FROM shop_admin";
+    $rows=fetchAll($sql);
+    return $rows;
 }
+//function delAdmin($id){
+//    $sql="DELETE "
+//}

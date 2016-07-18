@@ -72,9 +72,20 @@ function fetchOne($sql,$result_type=MYSQLI_ASSOC){
 }
 /*查找操作,获取所有记录*/
 function fetchAll($sql,$result_type=MYSQLI_ASSOC){
-    $result=mysqli_query($sql);
-    while(@$row=mysqli_fetch_array($result,$result_type)){
-        $rows[]=$row;
+    $conn=connect();
+    $result=$conn->query($sql);
+//    while(@$row=mysqli_fetch_array($result,$result_type)){
+//        $rows[]=$row;
+//    }
+//    $rows=[];
+    if ($result->num_rows > 0) {
+        // 输出每行数据
+        while($row = $result->fetch_assoc()) {
+            $rows[]=$row;
+//            return $row;
+        }
+    } else {
+        echo "0 个结果";
     }
     return $rows;
 }
