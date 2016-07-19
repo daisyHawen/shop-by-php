@@ -1,29 +1,30 @@
 <?php 
 require_once '../include.php';
-//$pageSize=2;
-//$page=$_REQUEST['page']?(int)$_REQUEST['page']:1;
-$rows=getAdminByPage();
-//$sql="select * from imooc_admin";
-//$totalRows=getResultNum($sql);
-//$pageSize=2;
-//$totalPage=ceil($totalRows/$pageSize);
-//$pageSize=2;
-//$page=$_REQUEST['page']?(int)$_REQUEST['page']:1;
-//if($page<1||$page==null||!is_numeric($page)){
-//	$page=1;
-//}
-//if($page>=$totalPage)$page=$totalPage;
-//$offset=($page-1)*$pageSize;
-//$sql="select id,username,email from imooc_admin limit {$offset},{$pageSize}";
-//$rows=fetchAll($sql);
-
-//$rows=getAllAdmin();
-
+$sql="select * from shop_admin";
+$rows=fetchAll($sql);
 if(!$rows){
 	alertMes("sorry,没有管理员,请添加!","addAdmin.php");
 	exit;
 }
+$sql="select * from shop_admin";
+$totalRows=getResultNum($sql);
+//每页显示的条数
+$pageSize=2;
+//totolPage==总页码数
+$totalPage=ceil($totalRows/$pageSize);
+//接受传来的'page',如果没有传，就为1
+$page=$_REQUEST['page']?(int)$_REQUEST['page']:1;
+$offset=($page-1)*$pageSize;
+if($page<1||$page==null||!is_numeric($page)){
+    $page=1;
+}
+if($page>=$totalPage){
+    $page=$totalPage;
+}
+$sql="select * from shop_admin limit {$offset},{$pageSize}";
+$rows=fetchAll($sql);
 ?>
+
 <!doctype html>
 <html>
 <head>

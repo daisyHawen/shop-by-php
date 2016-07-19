@@ -91,6 +91,10 @@ function fetchAll($sql,$result_type=MYSQLI_ASSOC){
 }
 /*获取记录条数*/
 function getResultNum($sql){
-    $result=mysqli_query($sql);
-    return mysql_num_rows($result);
+    $conn=connect();
+    $result=$conn->query($sql);
+//    $result=mysqli_query($sql);
+    $totalRows=$result->num_rows;
+//    print_r($totalRows);
+    return $totalRows;
 }
