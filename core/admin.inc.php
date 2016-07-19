@@ -45,8 +45,22 @@ function addAdmin(){
     }
 }
 /*查询管理员*/
-function getAdminByPage(){
-    $sql = "SELECT * FROM shop_admin";
+function getAdminByPage($pageSize=2){
+    $sql="select * from shop_admin";
+    global $totalRows;
+    $totalRows=getResultNum($sql);
+    global $totalPage;
+    $totalPage=ceil($totalRows/$pageSize);
+//接受传来的'page',如果没有传，就为1
+    $page=$_REQUEST['page']?(int)$_REQUEST['page']:1;
+    $offset=($page-1)*$pageSize;
+    if($page<1||$page==null||!is_numeric($page)){
+        $page=1;
+    }
+    if($page>=$totalPage){
+        $page=$totalPage;
+    }
+    $sql="select * from shop_admin limit {$offset},{$pageSize}";
     $rows=fetchAll($sql);
     return $rows;
 }
