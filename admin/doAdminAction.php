@@ -6,6 +6,8 @@ if($act=="logout"){
 }elseif ($act=="addUser"){
     addUser();
 }
-elseif ($act="addAdmin"){
+elseif ($act=="addAdmin"){
    addAdmin();
+}elseif ($act=="addCate"){
+    addCate();
 }
