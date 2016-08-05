@@ -38,17 +38,24 @@ function insert($table,$array){
 /*数据库更新操作
 *update shop_admin set username= "king" where id=1*/
 function update($table,$array,$where=null){
-    foreach ($array as $key=>$val){
-        if($str==null){
-            $sep="";
-        }else{
-            $sep=",";
-        }
-        $str.=$sep.$key."='".$val."'";//username="king"
-        $sql="update {$table} set {$str}".($where==null?null:"where").$where;
-        mysqli_query($sql);
-        return mysqli_affected_rows();
-    }
+//    foreach ($array as $key=>$val){
+//        if($str==null){
+//            $sep="";
+//        }else{
+//            $sep=",";
+//        }
+//        $str.=$sep.$key."='".$val."'";//username="king"
+//        $sql="update {$table} set {$str}".($where==null?null:"where").$where;
+//        mysqli_query($sql);
+//        return mysqli_affected_rows();
+//    }
+
+    $sql="update {$table} set cName='{$array}' ".($where==null?null:"where ").$where;
+//    echo $sql;
+    mysqli_query(connect(),$sql);
+//    printf( mysqli_affected_rows(connect()));
+    return mysqli_affected_rows(connect());
+
 }
 /*删除操作*/
 function delete($table,$where=null){
@@ -63,7 +70,6 @@ function fetchOne($sql,$result_type=MYSQLI_ASSOC){
     if ($result->num_rows > 0) {
         // 输出每行数据
         while($row = $result->fetch_assoc()) {
-//            echo "<br> id: ". $row["id"]. " - Name: ". $row["username"]. " " . $row["password"];
             return $row;
         }
     } else {
@@ -74,15 +80,10 @@ function fetchOne($sql,$result_type=MYSQLI_ASSOC){
 function fetchAll($sql,$result_type=MYSQLI_ASSOC){
     $conn=connect();
     $result=$conn->query($sql);
-//    while(@$row=mysqli_fetch_array($result,$result_type)){
-//        $rows[]=$row;
-//    }
-//    $rows=[];
     if ($result->num_rows > 0) {
         // 输出每行数据
         while($row = $result->fetch_assoc()) {
             $rows[]=$row;
-//            return $row;
         }
     } else {
         echo "0 个结果";
@@ -93,8 +94,6 @@ function fetchAll($sql,$result_type=MYSQLI_ASSOC){
 function getResultNum($sql){
     $conn=connect();
     $result=$conn->query($sql);
-//    $result=mysqli_query($sql);
     $totalRows=$result->num_rows;
-//    print_r($totalRows);
     return $totalRows;
 }
