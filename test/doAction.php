@@ -30,7 +30,7 @@ upload_max_filesize = 2M
 
 //客户端进行配置 <input type="hidden" name="MAX_FILE_SIZE" value="1024">
 //上传文件的信息保存在$_FILES
-print_r($_FILES);
+//print_r($_FILES);
 $filename=$_FILES['myFile']['name'];
 $type=$_FILES['myFile']['type'];
 $tmp_name=$_FILES['myFile']['tmp_name'];

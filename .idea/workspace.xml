@@ -77,28 +77,40 @@
       <file leaf-file-name="upload.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/upload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
+            <state relative-caret-position="133">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="doAction.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="doAction.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/doAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+            <state relative-caret-position="596">
+              <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="string.func.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/string.func.php">
+      <file leaf-file-name="upload.func.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/upload.func.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="228">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+              <folding>
+                <element signature="e#6#94#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="doAction1.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/doAction1.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -120,8 +132,9 @@
         <option value="$PROJECT_DIR$/core/cate.inc.php" />
         <option value="$PROJECT_DIR$/lib/mysql.func.php" />
         <option value="$PROJECT_DIR$/lib/string.func.php" />
-        <option value="$PROJECT_DIR$/test/upload.php" />
         <option value="$PROJECT_DIR$/test/doAction.php" />
+        <option value="$PROJECT_DIR$/test/upload.php" />
+        <option value="$PROJECT_DIR$/test/upload.func.php" />
       </list>
     </option>
   </component>
@@ -136,8 +149,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="747" />
-    <option name="y" value="7" />
+    <option name="x" value="-92" />
+    <option name="y" value="127" />
     <option name="width" value="1378" />
     <option name="height" value="689" />
   </component>
@@ -271,15 +284,15 @@
       <workItem from="1470193457653" duration="2212000" />
       <workItem from="1470363984948" duration="5540000" />
       <workItem from="1471315372722" duration="2604000" />
-      <workItem from="1471335245493" duration="5754000" />
+      <workItem from="1471335245493" duration="7585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16110000" />
+    <option name="totallyTimeSpent" value="17941000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="747" y="7" width="1378" height="689" extended-state="0" />
+    <frame x="-92" y="127" width="1378" height="689" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15271659" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -498,14 +511,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/doAction1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/common.func.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -517,14 +522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="39" column="56" selection-start-line="0" selection-start-column="0" selection-end-line="71" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/upload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="59" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -551,11 +548,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/doAction1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/doAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="57" column="30" selection-start-line="57" selection-start-column="30" selection-end-line="57" selection-end-column="30" />
+        <state relative-caret-position="596">
+          <caret line="88" column="18" selection-start-line="88" selection-start-column="18" selection-end-line="88" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/upload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/upload.func.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
