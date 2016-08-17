@@ -1,4 +1,5 @@
 <?php
+require_once '../lib/string.func.php';
 header("content-type:text/html;charset=utf-8");
 /**
  * Created by PhpStorm.
@@ -35,13 +36,36 @@ $type=$_FILES['myFile']['type'];
 $tmp_name=$_FILES['myFile']['tmp_name'];
 $error=$_FILES['myFile']['error'];
 $size=$_FILES['myFile']['size'];
-
+$allowExt=array('gif','jpeg','jpg','png','wbmp');
+$maxSize=1048576;
+$imgFlag=true;
 //判断错误信息
 if($error==UPLOAD_ERR_OK){
+    $ext=getExt($filename);
+    //判断非法类型
+    if(!in_array($ext,$allowExt)){
+        exit('非法文件类型');
+    }
+    //限制上传文件大小
+    if($size>$maxSize){
+        exit("文件过大");
+    }
+    //验证是否是真正的图片类型
+    if($imgFlag){
+        $info=getimagesize($tmp_name);
+//        var_dump($info);
+        if(!$info) {
+            exit('不是真正的图片类型');
+        }
+    }
 //文件是否是通过HTTP POST方式上传的
-    //is_uploaded_file($tmp_name);
     if(is_uploaded_file($tmp_name)){
-        $destination="uploads/".$filename;
+        $filename=getUniName().".".$ext;
+        $path='uploads';
+        if(!file_exists($path)){
+            mkdir($path,0777,true);
+        }
+        $destination=$path."/".$filename;
         if(move_uploaded_file($tmp_name,$destination)){
             $mes="文件上传成功";
         }
