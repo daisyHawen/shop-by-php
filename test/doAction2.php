@@ -9,16 +9,17 @@
 require_once '../lib/string.func.php';
 require_once 'upload.func.php';
 header("content-type:text/html;charset=utf-8");
-//构建文件上传信息
+
+//构建文件上传信息,返回重建的多文件数组
 function buildInfo(){
     foreach($_FILES as $v){
-        //单文件，类型为字符串
+        //若单文件，类型为字符串
         $i=0;
         if(is_string($v['name'])){
             $files[$i]=$v;
             $i++;
         }else{
-            //多文件,类型为数组
+            //处理多文件,类型为数组
             foreach ($v['name'] as $key=>$val){
                 $files[$i]['name']=$val;
                 $files[$i]['size']=$v['size'][$key];
@@ -31,8 +32,7 @@ function buildInfo(){
         return $files;
     }
 }
-//$info=buildInfo();
-//print_r($info);
+//处理长传多文件
 function uploadFiles(){
     $files=buildInfo();
     foreach ($files as $val){
